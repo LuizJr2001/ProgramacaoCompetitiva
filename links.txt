@@ -1,0 +1,21 @@
+Videos:
+- Maratona UFMG:
+https://www.youtube.com/@maratonaufmg2572/playlists
+- MIT Introduction to Algorithms
+https://www.youtube.com/watch?v=HtSuA80QTyo
+- MaratonUSP
+https://www.youtube.com/channel/UCB_SQAulqgmQ0Vfww9wzfWA
+
+Referências:
+- Biblioteca Rábalabaxurias
+https://github.com/brunomaletta/Biblioteca
+- Referência C++
+https://en.cppreference.com/w/
+
+Lista de Exercícios:
+- Maratona UFMG
+[https://docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1QQ1QvYNDPKv9Aqh5c2VL_KCtpqASDWeRcLkyyXlPM0M/edit#gid=2120771877)
+
+Slides:
+- Maratona UFMG
+[https://drive.google.com/drive/u/2/fo...](https://drive.google.com/drive/u/0/folders/1WCpWlAyrkWwZJOiQx-q43FKxpCCT3pBb)
