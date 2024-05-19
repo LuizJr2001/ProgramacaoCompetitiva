@@ -1,4 +1,5 @@
 Lista de Exercícios e Catálogo de Fontes para Programação Competitiva
+
 Olá! Aqui está uma coleção de exercícios e fontes de código que desenvolvi com o objetivo de aprimorar minhas habilidades em programação competitiva. Esses materiais abrangem diversos tópicos, desde algoritmos clássicos até problemas específicos de competições.
 
 Exercícios
