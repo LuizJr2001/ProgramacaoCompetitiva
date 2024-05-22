@@ -1,54 +1,63 @@
-// Procurar MMC
-
 #include <bits/stdc++.h>
-#define int long long int
 
 using namespace std;
 
+typedef long long int ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef vector<vi> vvi;
+typedef pair<int, int> pii;
+typedef vector<pii> vii;
+typedef vector<bool> vb;
+typedef vector<string> vs;
+const ll MAX = 10e9 + 100;
+const ll MIN = -MAX;
+#define all(x) x.begin(), x.end()
+#define SZ(x) (ll) x.size()
+#define endl '\n'
+#define cout(x) cout << x << endl;
+
 stringstream ss;
 
-void calculo(int n)
+void calcular(ll n)
 {
+	ll a, b;
+	cin >> a >> b;
 
-    int a, b;
-    cin >> a >> b;
+	vll av;
+	vll bv;
 
-    if (b % 10 == 0 || abs(b) <= 10)
-    {
-        ss << 10 * ceil(a / 10.0) << " x " << b;
+	av.clear();
+	bv.clear();
 
-        if (b * (a - 10 * ceil(a / 10.0)) < 0)
-            ss << " - ";
-        else
-            ss << " + ";
+	string num = to_string(a);
+	for (ll i = 0; i < SZ(num); i++)
+	{
+		if (num[i] != '0')
+			av.push_back((num[i] - '0') * round(pow(10, SZ(num) - i - 1)));
+	}
 
-        ss << abs(a - 10 * ceil(a / 10.0)) << " x " << abs(b) << endl;
-    }
-    else if (a % 10 == 0 || abs(a) <= 10)
-    {
-        ss << b - 10 * ceil(b / 10.0) << " x " << a;
+	num = to_string(b);
+	for (ll i = 0; i < SZ(num); i++)
+	{
+		if (num[i] != '0')
+			bv.push_back(num[i] - '0' * round(pow(10, SZ(num) - i - 1)));
+	}
 
-        if (a * 10 * ceil(b / 10.0) > 0)
-            ss << " + ";
-        else
-            ss << " - ";
-
-        ss << abs(a) << " x " << abs(10 * ceil(b / 10.0)) << endl;
-    }
-
-    n--;
-    if (n > 0)
-        calculo(n);
-    else
-        cout << ss.str();
+	for (auto i : av)
+	{
+		for (auto j : bv)
+		{
+		}
+	}
 }
-
-int32_t main()
+int main()
 {
-    int n;
-    cin >> n;
+	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+	ll n;
+	cin >> n;
 
-    calculo(n);
+	calcular(n);
 
-    return 0;
+	return 0;
 }
