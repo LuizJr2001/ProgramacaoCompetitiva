@@ -1,12 +1,6 @@
-// Tarefa
-// Dado um inteiro N, verifique se N é primo.
+///https://br.spoj.com/problems/PRIMO/
 
-// Entrada
-// A entrada é composta por um único caso de teste, composto por uma única linha que contém o inteiro N.
-
-// Saída
-// Seu programa deve produzir uma única linha, contendo a palavra "sim", se N for primo, e "nao", caso contrário (note a ausência de acentuação).
-//https://br.spoj.com/problems/PRIMO/
+//Complexidade: O(sqrt(n))
 
 #include <bits/stdc++.h>
 
