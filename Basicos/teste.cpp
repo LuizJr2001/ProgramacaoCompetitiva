@@ -41,7 +41,7 @@ vll funcao()
 int main()
 {
 	ll t;
-		cin >> t;
+	cin >> t;
 
 	while(t--)
 	{
@@ -50,13 +50,13 @@ int main()
 
 		for(ll i = 0; i < SZ(a); ++i)
 		{
-			 for(ll j = 0; j < SZ(b); ++j)
-			 {
-			 	if(i || j)
-			 		ss << "+ ";
-			 	ss << a[i] << " x " << b[j] << endl[i == SZ(a) - 1 && j == SZ(b) - 1];
-			 	//(i == SZ(a) - 1 && j == SZ(b) - 1 ? endl:""); 
-			 }
+			for(ll j = 0; j < SZ(b); ++j)
+			{
+				if(i || j)
+					ss << "+ ";
+				ss << a[i] << " x " << b[j] << endl[i == SZ(a) - 1 && j == SZ(b) - 1];
+				//(i == SZ(a) - 1 && j == SZ(b) - 1 ? endl:""); 
+			}
 		}
 	}
 	cout << ss.str();
