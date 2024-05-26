@@ -14,50 +14,52 @@ const ll MAX = 10e9 + 100;
 const ll MIN = -MAX;
 #define all(x) x.begin(), x.end()
 #define SZ(x) (ll) x.size()
-#define endl '\n'
-#define cout(x) cout << x << endl;
+#define endl " \n"
 
 stringstream ss;
 
-void calcular(ll n)
+vll funcao()
 {
-	ll a, b;
-	cin >> a >> b;
+	vll vec;
 
-	vll av;
-	vll bv;
+	ll aux;
+	cin >> aux;
 
-	av.clear();
-	bv.clear();
+	string num = to_string(abs(aux));
 
-	string num = to_string(a);
-	for (ll i = 0; i < SZ(num); i++)
+	for(ll i = 0; i < SZ(num); ++i)
 	{
-		if (num[i] != '0')
-			av.push_back((num[i] - '0') * round(pow(10, SZ(num) - i - 1)));
+		if(num[i]!='0' && aux > 0)
+			vec.push_back((num[i]-'0') * round(pow(10, SZ(num) - 1 - i)));	
+		else if(num[i]!='0' && aux < 0)
+			vec.push_back( - (num[i]-'0') * round(pow(10, SZ(num) - 1 - i)));	
 	}
 
-	num = to_string(b);
-	for (ll i = 0; i < SZ(num); i++)
-	{
-		if (num[i] != '0')
-			bv.push_back(num[i] - '0' * round(pow(10, SZ(num) - i - 1)));
-	}
-
-	for (auto i : av)
-	{
-		for (auto j : bv)
-		{
-		}
-	}
+	return vec;
 }
+
 int main()
 {
-	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	ll n;
-	cin >> n;
+	ll t;
+		cin >> t;
 
-	calcular(n);
+	while(t--)
+	{
+		vll a = funcao();
+		vll b = funcao();
+
+		for(ll i = 0; i < SZ(a); ++i)
+		{
+			// for(ll j = 0; j < SZ(b); ++j)
+			// {
+			// 	if(i || j)
+			// 		ss << "+ ";
+			// 	ss << a[i] << " x " << b[j] << endl[i == SZ(a) - 1 && j == SZ(b) - 1];
+			// 	//(i == SZ(a) - 1 && j == SZ(b) - 1 ? endl:""); 
+			// }
+		}
+	}
+	cout << ss.str();
 
 	return 0;
 }
