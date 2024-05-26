@@ -32,6 +32,7 @@
 // O(n)	The code consists of a loop that runs 'n' times, where 'n' is the number of test cases. 
 // Inside the loop, the 'funct' function is called, which has a constant time complexity. 
 // Therefore, the overall time complexity is O(n)
+//https://codeforces.com/problemset/problem/1328/A
 
 #include <bits/stdc++.h>
 #define int long long int

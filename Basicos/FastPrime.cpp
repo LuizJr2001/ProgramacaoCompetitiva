@@ -1,6 +1,7 @@
 // 
 
 //Complexidade O(n * sqrt(x))
+//https://www.urionlinejudge.com.br/judge/en/problems/view/1221
 
 #include <bits/stdc++.h>
 

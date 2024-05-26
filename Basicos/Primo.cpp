@@ -6,6 +6,7 @@
 
 // Saída
 // Seu programa deve produzir uma única linha, contendo a palavra "sim", se N for primo, e "nao", caso contrário (note a ausência de acentuação).
+//https://br.spoj.com/problems/PRIMO/
 
 #include <bits/stdc++.h>
 

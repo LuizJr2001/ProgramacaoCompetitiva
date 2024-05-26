@@ -18,6 +18,7 @@
 // A saída deve ser composta por uma unica linha contendo um inteiro, indicando o número esperado total de minhocas a serem colhidas pela máquina durante o teste.
 
 //Complexidade O(n * m) => N <= 10^4 operações
+//https://br.spoj.com/problems/MINHOCA/
 
 #include <bits/stdc++.h>
 #define int long long int

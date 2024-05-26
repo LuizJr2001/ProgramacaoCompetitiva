@@ -33,6 +33,7 @@
 
 
 //O(n)
+//https://codeforces.com/contest/1315/problem/A
 
 #include <bits/stdc++.h>
 #define int long long int

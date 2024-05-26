@@ -13,7 +13,7 @@
 
 
 // O(n)	The code recursively calls the 'lista' function for each input number 'n', iterating through each element once. Therefore, the time complexity is O(n) where 'n' is the total number of elements in the input.
-
+//https://br.spoj.com/problems/QUERM/
 #include <bits/stdc++.h>
 #define int long long int
 

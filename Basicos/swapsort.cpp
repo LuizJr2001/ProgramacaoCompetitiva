@@ -11,6 +11,7 @@
 // If there are multiple answers, print any of them. It is guaranteed that at least one answer exists.
 
 //Complexidade O(n^2) = 10e8
+//https://codeforces.com/contest/489/problem/A
 
 #include <bits/stdc++.h>
 using namespace std;
