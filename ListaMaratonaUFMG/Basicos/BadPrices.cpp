@@ -1,3 +1,6 @@
+//https://codeforces.com/contest/1213/problem/B
+//Complexidade: O(n)
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -10,7 +13,7 @@ typedef pair<int, int> pii;
 typedef vector<pii> vii;
 typedef vector<bool> vb;
 typedef vector<string> vs;
-const ll MAX = 10e9 + 100;
+const ll MAX = (ll)1e9;
 const ll MIN = -MAX;
 #define all(x) x.begin(), x.end()
 #define SZ(x) (ll) x.size()
@@ -18,56 +21,43 @@ const ll MIN = -MAX;
 stringstream ss;
 
 int main()
-{	
+{
 	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-	ll t; cin >> t;
+	int t;cin >> t;
 
 	while(t--)
 	{
-
-		ll n, count(0);
+		int n, count(0);
 		cin >> n;
 
-		vll vec;
-		vll aux;
+		vi x(n);
 
-		for(size_t i = 0; i < n; i++)
-		{	
-			ll j;
-			cin >> j;
-
-			vec.push_back(j);
-			aux.push_back(j);
+		for (int i = 0; i < n; ++i)
+		{
+			cin >> x[i];
 		}
 
-		sort(all(aux));
+		int min = (int)1e9;
 
-		for(size_t i = 0, j = 0; i < n; i++)
+		vi y(n);
+
+		for (int i = n - 1; i > -1; --i)
 		{
-			if(vec[i]>aux[j])
+			min = std::min(min, x[i]);
+			y[i] = min;
+		}
+
+		for (int i = 0; i < n - 1; ++i)
+		{
+			if (x[i] > y[i+1])
 			{
 				count++;
-				remove(all(aux), vec[i]);
-				//auto it = find(all(aux), vec[i]);
-				//if(it!=aux.end())
-				//aux.erase(it);
 			}
-			else if(vec[i] == aux[j])
-			{
-				remove(all(aux), vec[i]);
-				//auto it = find(all(aux), vec[i]);
-				//if(it!=aux.end())
-				//aux.erase(it);
-
-			}
-			else
-				j++;
 		}
 
-
-		ss << count << '\n';
-	}
+		ss << count << endl;
+	}	
 
 	cout << ss.str();
 
