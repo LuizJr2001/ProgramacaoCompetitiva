@@ -11,6 +11,8 @@ Referências:
 https://github.com/brunomaletta/Biblioteca
 - Referência C++
 https://en.cppreference.com/w/
+- Notação O e Complexidade
+https://www.freecodecamp.org/portuguese/news/o-que-e-a-notacao-big-o-complexidade-de-tempo-e-de-espaco/
 
 Lista de Exercícios:
 - Maratona UFMG
