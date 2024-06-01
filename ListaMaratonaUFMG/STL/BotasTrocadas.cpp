@@ -18,6 +18,11 @@ const ll MIN = -MAX;
 
 stringstream ss;
 
+bool compara(pair<int, string> a, pair<int, string> b)
+{
+	return a.first>b.first;
+}
+
 int main()
 {
 	ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -37,10 +42,17 @@ int main()
 
 	}
 	
-	for(auto i:shoe)
+	sort(all(shoe), compara);	
+	int count(0);
+
+	for(int i = 1; i < n; ++i)
 	{
-		cout << i.second << endl;
+		if(shoe[i].first==shoe[i-1].first)
+			if(shoe[i].second + shoe[i-1].second == "DE" || shoe[i].second + shoe[i-1].second == "ED")
+				count++;
 	}	
+
+	cout << count << '\n';
 
 	return 0;
 }
