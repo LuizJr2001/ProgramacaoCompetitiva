@@ -15,6 +15,7 @@ const ll MIN = -MAX;
 #define all(x) x.begin(), x.end()
 #define SZ(x) (ll) x.size()
 #define dgb(x) cout << #x << '=' << x << '\n';
+#define endl '\n'
 
 stringstream ss;
 
