@@ -23,6 +23,6 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 stringstream ss;
 
 int main()
-{	
+{	_
 	return 0;
 }
