@@ -1,3 +1,5 @@
+//https://olimpiada.ic.unicamp.br/pratique/p2/2017/f1/botas/
+//Complexidade: O(n)
 #include <bits/stdc++.h>
 
 using namespace std;
