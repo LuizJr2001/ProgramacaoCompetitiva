@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+int main() {
+    // Operações com std::string
+    std::string s1 = "Hello";
+    std::string s2 = "World";
+    std::string s3 = s1 + " " + s2;
+    
+    std::cout << "s3: " << s3 << std::endl;
+    
+    s3.insert(5, ", Everyone");
+    std::cout << "s3 after insert: " << s3 << std::endl;
+    
+    s3.erase(5, 10);
+    std::cout << "s3 after erase: " << s3 << std::endl;
+    
+    size_t pos = s3.find("World");
+    std::cout << "Position of 'World' in s3: " << pos << std::endl;
+    
+    // Operações com C-style strings
+    char cstr1[20] = "Hello";
+    char cstr2[20] = "World";
+    
+    strcat(cstr1, " ");
+    strcat(cstr1, cstr2);
+    std::cout << "cstr1: " << cstr1 << std::endl;
+    
+    char* posC = strstr(cstr1, "World");
+    if (posC) {
+        std::cout << "Found 'World' in cstr1 at position: " << posC - cstr1 << std::endl;
+    }	
+
+    // Usando um loop for para converter todos os caracteres para minúsculas
+    for (char& c : str) {
+        c = std::tolower(static_cast<unsigned char>(c));
+    }
+	
+    // Usando um loop for para converter todos os caracteres para maiúsculas
+    for (char& c : str) {
+        c = std::toupper(static_cast<unsigned char>(c));
+    }
+    
+    std::string original_str = "Hello, World!";
+    std::vector<int> ascii_values;
+
+    // Converte a string para valores ASCII
+    for (char c : original_str) {
+        ascii_values.push_back((int)c); // Conversão de char para int
+    }
+
+    // Converte os valores ASCII de volta para string
+    std::string converted_str;
+    for (int val : ascii_values) {
+        converted_str.push_back((char)val); // Conversão de int para char
+    }
+
+    return 0;
+}
+
