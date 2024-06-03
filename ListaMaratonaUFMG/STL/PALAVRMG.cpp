@@ -32,25 +32,26 @@ int main()
 		string str;
 		cin >> str;
 	
-		ss << str << ": ";
+		bool sinal = false;
 
-		for(int i(0); i < SZ(str); ++i)
+		for(int i(1); i < SZ(str); ++i)
 		{
-			str[i]=tolower(str[i]);
-			
-			if(str[i]==str[i+1])
-				str[0]='0';
+			if(tolower(str[i])>tolower(str[i-1]))
+				sinal = true;
+			else
+			{
+				sinal = false;
+				break;
+			}
 		}
+		
+		if(SZ(str)==1)
+			sinal = true;
 
-		string sortstr(str);
-		
-		sort(all(str));
-		
-		if(str==sortstr && str[0]!=0)
-			ss << "O" << endl;
+		if(sinal)
+			ss << str << ": " << "O" << endl;
 		else
-			ss << "N" << endl;
-
+			ss << str << ": " << "N" << endl;
 	}
 	
 	cout << ss.str();
