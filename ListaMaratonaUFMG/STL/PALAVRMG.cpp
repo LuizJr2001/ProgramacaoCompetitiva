@@ -1,3 +1,5 @@
+//https://br.spoj.com/problems/PALAVRMG/
+//Complexidade O(n)
 #include <bits/stdc++.h>
 
 using namespace std;
