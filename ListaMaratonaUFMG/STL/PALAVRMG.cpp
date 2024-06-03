@@ -1,5 +1,3 @@
-//https://www.urionlinejudge.com.br/judge/pt/problems/view/2653
-//Complexidade O(n)
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -27,17 +25,36 @@ stringstream ss;
 int main()
 {	_
 	
-	string str;
-	
-	std::unordered_set<string> set;
+	int t; cin >> t;
 
-	while(cin >> str)
+	while(t--)
 	{
-		set.insert(str);
+		string str;
+		cin >> str;
+	
+		ss << str << ": ";
+
+		for(int i(0); i < SZ(str); ++i)
+		{
+			str[i]=tolower(str[i]);
+			
+			if(str[i]==str[i+1])
+				str[0]='0';
+		}
+
+		string sortstr(str);
+		
+		sort(all(str));
+		
+		if(str==sortstr && str[0]!=0)
+			ss << "O" << endl;
+		else
+			ss << "N" << endl;
+
 	}
-
-	cout << SZ(set) << endl;
-
+	
+	cout << ss.str();
+	
 	return 0;
 }
 

@@ -1,5 +1,5 @@
-//https://www.urionlinejudge.com.br/judge/pt/problems/view/2653
-//Complexidade O(n)
+//https://judge.beecrowd.com/pt/problems/view/2653
+//Complexidade: O(n * log n)
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -27,16 +27,16 @@ stringstream ss;
 int main()
 {	_
 	
-	string str;
-	
-	std::unordered_set<string> set;
+	string joias;	
+		
+	set<string> set;
 
-	while(cin >> str)
+	while(cin >> joias)
 	{
-		set.insert(str);
+		set.insert(joias);
 	}
 
-	cout << SZ(set) << endl;
+	cout << SZ(set) << endl;	
 
 	return 0;
 }

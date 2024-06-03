@@ -1,5 +1,5 @@
-//https://www.urionlinejudge.com.br/judge/pt/problems/view/2653
-//Complexidade O(n)
+//https://codeforces.com/problemset/problem/1301/A
+//Complexidade: O(t * 3 * |str|)
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -27,16 +27,35 @@ stringstream ss;
 int main()
 {	_
 	
-	string str;
-	
-	std::unordered_set<string> set;
+	int n; cin>>n;
 
-	while(cin >> str)
+	vector<int> vec(12, 0);
+
+	for(int i(0); i < 12; ++i)
 	{
-		set.insert(str);
+		cin >> vec[i];
 	}
 
-	cout << SZ(set) << endl;
+	sort(vec.begin(), vec.end(), greater<>());
+	
+	int count(0), k(0);
+
+	for(auto i:vec)
+	{
+		if(count<n)
+		{
+			count+=i;
+			k++;
+		}
+		else
+			break;
+	}
+	
+	if(count<n)
+		cout << -1 << endl;
+	else
+		cout << k << endl;
+
 
 	return 0;
 }
