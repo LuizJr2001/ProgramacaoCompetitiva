@@ -1,5 +1,5 @@
-//https://www.urionlinejudge.com.br/judge/pt/problems/view/2653
-//Complexidade O(n)
+//https://codeforces.com/contest/1333/problem/A
+//Complexidade: O(n²)
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -26,18 +26,27 @@ stringstream ss;
 
 int main()
 {	_
-	
-	string str;
-	
-	std::unordered_set<string> set;
 
-	while(cin >> str)
+	int t; cin >> t;
+	while(t--)
 	{
-		set.insert(str);
-	}
+		int line, row;
+		cin >> line >> row;
 
-	cout << SZ(set) << endl;
+		vector<vector<char>> board (line, vector<char> (row, 'B'));
+
+		board[0][0]='W';
+
+		for(auto line:board)
+		{
+			for(auto i:line)
+			{
+				cout << i;
+			}
+
+			cout << endl;
+		}
+	}
 
 	return 0;
 }
-
