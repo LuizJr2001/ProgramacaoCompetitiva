@@ -22,9 +22,39 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 #define dgb(x) cout << #x << '=' << x << '\n';
 #define endl '\n'
 
-bool compara(pair<int, pair<int, int>>& a, pair<int, pair<int, int>>& b)
+bool compara(pair<int, pair<int,int>> a, pair<int, pair<int,int>> b)
 {
     return a.f < b.f;
+}
+
+void distancia(vi &vec)
+{
+    vector<pair<int, pair<int,int>>> distance;
+
+    for(int i(1); i < SZ(vec); i+=2)
+    {
+        int x = abs(vec[i] - vec[i - 1]);
+
+        distance.push_back({x, {vec[i], vec[i - 1]}});
+
+    }
+
+    if(SZ(vec) % 2 != 0)
+    {
+        int x = abs(vec[SZ(vec) - 1] - vec[SZ(vec) - 2]);
+
+        distance.push_back({x, {vec[SZ(vec) - 1], vec[SZ(vec) - 2]}});
+
+    }
+
+    sort(all(distance), compara);
+
+    for (auto i:distance) {
+        cout << i.s.f << " " << i.s.s << " " << i.first << endl;
+    }
+
+    cout << endl;
+    
 }
 
 int main()
@@ -44,21 +74,9 @@ int main()
         vec.push_back(aux);
     }
 
-    sort(all(vec), greater<>());
+    sort(all(vec));
 
-    vector<pair<int, pair<int, int>>> output;
-
-    for(int i(1); i < n; ++i)
-    {
-        int dist = vec[i] - vec[i - 1];
-        int dest = vec[i];
-        int origin = vec [i - 1];
-
-        output.insert(output.end(),{dist, {dest, origin}});
-    }
-
-    sort(all(output), compara);
-
+    distancia(vec);
 
     return 0;
 }
