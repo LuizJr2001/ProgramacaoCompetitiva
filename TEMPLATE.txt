@@ -20,8 +20,6 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 #define dgb(x) cout << #x << '=' << x << '\n';
 #define endl '\n'
 
-stringstream ss;
-
 int main()
 {	_
 	return 0;
